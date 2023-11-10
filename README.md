@@ -6,8 +6,5 @@ This repository contains the trained machine learning model in the form of an .h
 
 ## Download Model
 
-You can download the model by clicking the link below:
+You can download the model by clicking the link: [Download .h5 Model](https://drive.google.com/your/model/file)
 
-[Download .h5 Model](https://drive.google.com/your/model/file)
-
-Feel free to use this model in your projects and experiments. If you have any questions or issues, please let me know.
