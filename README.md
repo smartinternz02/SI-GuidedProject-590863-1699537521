@@ -1,10 +1,6 @@
 # SI-GuidedProject-590863-1699537521
 
-## Description
+## Download .h5 Model
 
-This repository contains the trained machine learning model in the form of an .h5 file. Due to its large size, it couldn't be directly uploaded to GitHub. Instead, the model file has been hosted on Google Drive.
-
-## Download Model
-
-You can download the model by clicking the link: [Download .h5 Model](https://drive.google.com/your/model/file)
-
+Due to the large size of .h5 file (56 MB), it could not be uploaded to GitHub.
+You can download the model by clicking the link: [Download .h5 Model](https://drive.google.com/file/d/1OYeWvXL0Eo8eOzHnf8YfiMkE4JobByam/view?usp=sharing)
