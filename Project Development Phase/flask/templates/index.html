@@ -39,10 +39,10 @@
             padding: 20px;
             border-radius: 10px;
             color: white;
-            margin: 10px 200px; /* Adjust left margin */
+            margin: 10px 200px; 
         }
         .button {
-            display: inline-block; /* Display the button inline */
+            display: inline-block; 
             margin: 20px 0;
             padding: 10px 20px;
             background-color: #3498db;
@@ -53,7 +53,7 @@
             font-size: 16px;
         }
         .button-green {
-            display: inline-block; /* Display the button inline */
+            display: inline-block;
             margin: 20px 0;
             padding: 10px 20px;
             background-color: lightgreen;
@@ -80,7 +80,7 @@
         .file-info {
             font-size: 14px;
             color: white;
-            padding-left: 6px; /* Added padding for alignment */
+            padding-left: 6px; 
         }
     </style>
     <script>
@@ -91,8 +91,26 @@
             fileInfo.textContent = `File: ${fileName}`;
         }
         function updateHealthStatus() {
-            document.querySelectorAll('.file-info')[1].textContent = 'Health: Healthy';
-        }
+    		const fileInfo = document.querySelectorAll('.file-info')[1];
+    		fileInfo.textContent = 'Health: Measuring...';
+
+    		const formData = new FormData(document.getElementById('fileInput').form);
+
+    		fetch('http://localhost:5000/upload', {
+        		method: 'POST',
+        		body: formData,
+    		})
+    		.then(response => response.json())
+    		.then(data => {
+        		fileInfo.textContent = `Health: ${data.health_index}`;
+    		})
+    		.catch(error => {
+        		console.error('Error:', error);
+        		fileInfo.textContent = 'Health: Error';
+    		});
+		}
+
+
     </script>
 </head>
 <body>
@@ -123,4 +141,3 @@
     </div>
 </body>
 </html>
-
